@@ -1,3 +1,6 @@
+# cppnd-openstreetmap-route-planner
+# C++ Project - OpenStreetMap Route Planner
+
 ### Dependencies
 - cairo
 - graphicsmagick
@@ -21,7 +24,7 @@ make
 
 ### Run
 The name of the binary file will match the directory you build from.
-So, if running from vagrant:
+So, if running from /vagrant:
 ```
 ../bin/vagrant -f ../map.osm
 ```
