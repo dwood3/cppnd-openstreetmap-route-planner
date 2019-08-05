@@ -53,14 +53,34 @@ int main(int argc, const char **argv)
     float start_x, start_y, end_x, end_y;
 
     std::cout << "The map coordinates begin at (0,0) in the lower left corner, and end at (100, 100) in the upper right." << "\n";
+
     std::cout << "Enter a start x between 0 and 100: ";
     std::cin >> start_x;
+    if ((start_x < 0) || (start_x > 100)){
+        std::cout << "Out of range [0-100]" << std::endl;
+        return -1;
+    }
+
     std::cout << "Enter a start y between 0 and 100: ";
     std::cin >> start_y;
+    if ((start_y < 0) || (start_y > 100)){
+        std::cout << "Out of range [0-100]" << std::endl;
+        return -1;
+    }
+
     std::cout << "Enter a end x between 0 and 100: ";
     std::cin >> end_x;
+    if ((end_x < 0) || (end_x > 100)){
+        std::cout << "Out of range [0-100]" << std::endl;
+        return -1;
+    }
+
     std::cout << "Enter a end y between 0 and 100: ";
     std::cin >> end_y;
+    if ((end_y < 0) || (end_y > 100)){
+        std::cout << "Out of range [0-100]" << std::endl;
+        return -1;
+    }
 
     // Build Model.
     RouteModel model{osm_data};
